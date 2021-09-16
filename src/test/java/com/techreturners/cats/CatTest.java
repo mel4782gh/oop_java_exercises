@@ -1,6 +1,7 @@
 package com.techreturners.cats;
 
 import org.junit.Test;
+import org.junit.Ignore;
 
 import static org.junit.Assert.*;
 
@@ -16,8 +17,9 @@ public class CatTest {
     public void checkCatCanGoToSleep() {
         Cat domesticCat = new DomesticCat();
         domesticCat.goToSleep();
-        assertTrue("Cat should be snoozing", domesticCat.isAsleep());
+        assertTrue("Cat should be snoozing ", domesticCat.isAsleep());
     }
+
 
     @Test
     public void checkCatCanWakep() {
@@ -27,17 +29,20 @@ public class CatTest {
         assertFalse("Cat should be awake now", domesticCat.isAsleep());
     }
 
+
     @Test
     public void checkCatSetting() {
         Cat domesticCat = new DomesticCat();
         assertEquals("domestic", domesticCat.getSetting());
     }
 
+
     @Test
     public void checkCatHeight() {
         Cat domesticCat = new DomesticCat();
         assertEquals(23, domesticCat.getAverageHeight());
     }
+
 
     @Test
     public void checkLionHeight() {
@@ -52,6 +57,7 @@ public class CatTest {
         assertEquals("Roar!!!!", lionCat.eat());
     }
 
+
     @Test
     public void feedTheCheetah() {
         Cat cheetahCat = new CheetahCat();
@@ -62,5 +68,11 @@ public class CatTest {
     public void feedTheCat() {
         Cat domesticCat = new DomesticCat();
         assertEquals("Purrrrrrr", domesticCat.eat());
+    }
+
+    @Test
+    public void feedTheCatComment() {
+        DomesticCat domesticCat = new DomesticCat();
+        assertEquals("Purrrrrrr. It will do I suppose", domesticCat.eatComment());
     }
 }
