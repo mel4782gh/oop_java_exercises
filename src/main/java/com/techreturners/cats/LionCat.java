@@ -2,13 +2,9 @@ package com.techreturners.cats;
 
 public class LionCat extends CatSpecies {
 
-    @Override
-    public int getAverageHeight() {
-        return super.height = 1100;
+
+    public LionCat() {
+        super(1100, "wild", "Roar!!!!");
     }
 
-    @Override
-    public String eat() {
-        return super.eatSound = "Roar!!!!";
-    }
 }

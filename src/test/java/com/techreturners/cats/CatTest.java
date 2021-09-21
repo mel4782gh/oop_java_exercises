@@ -1,7 +1,10 @@
 package com.techreturners.cats;
 
+import com.techreturners.cats.testhelper.RandomStub;
 import org.junit.Test;
-import org.junit.Ignore;
+
+import java.util.Random;
+
 
 import static org.junit.Assert.*;
 
@@ -71,8 +74,13 @@ public class CatTest {
     }
 
     @Test
-    public void feedTheCatComment() {
+    public void feedTheCatRandomComment() {
+        //Arrange test - this test is set up with a testing double - a stub for Random class. The stub sets a random number to a specific value so we can use it in a deterministic test.
+        Random randomStub = new RandomStub(2);
         DomesticCat domesticCat = new DomesticCat();
-        assertEquals("Purrrrrrr. It will do I suppose", domesticCat.eatComment());
+
+        //Act - call the eatRandomComment method that passes a 'determined' random number so can test will amend the comment if the number is even
+        //Assert that the comment is amended
+        assertEquals("Purrrrrrr. It will do I suppose", domesticCat.eatRandomComment(randomStub));
     }
 }

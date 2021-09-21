@@ -2,8 +2,10 @@ package com.techreturners.cats;
 
 public class CheetahCat extends CatSpecies {
 
-    @Override
-    public String eat() {
-        return super.eatSound = "Zzzzzzz";
+
+    public CheetahCat() {
+        super(100, "wild", "Zzzzzzz");
     }
+
+
 }
